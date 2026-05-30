@@ -1,148 +1,148 @@
-# Customer Churn Prediction
+# Customer Churn Prediction Using Machine Learning
 
 ## Project Overview
 
-This project predicts whether a telecom customer is likely to churn (leave the service) or stay with the company using Machine Learning.
-
-The goal is to help telecom companies identify customers at risk of leaving and take preventive actions to improve customer retention.
-
----
+This project aims to predict customer churn in a telecom company using Machine Learning. Customer churn refers to customers who stop using a company's services. By identifying customers who are likely to churn, businesses can take proactive measures to improve customer retention.
 
 ## Problem Statement
 
-Customer churn is a major challenge for telecom companies. Losing existing customers leads to revenue loss and increased acquisition costs.
-
-This project builds a machine learning model that predicts churn based on customer information and service usage patterns.
-
----
+Customer retention is a major challenge in the telecom industry. Losing existing customers impacts revenue and increases customer acquisition costs. The objective of this project is to build a predictive model that can identify customers who are likely to leave the service.
 
 ## Dataset Information
 
-Dataset: Telco Customer Churn Dataset
+* Dataset: Telco Customer Churn Dataset
+* Total Records: 7043
+* Total Features: 21
+* Target Variable: Churn (Yes/No)
 
-Total Records: 7043
+### Key Features
 
-Features: 21
-
-Target Variable:
-- Churn
-  - Yes = Customer Left
-  - No = Customer Stayed
-
----
+* Gender
+* SeniorCitizen
+* Partner
+* Dependents
+* Tenure
+* MonthlyCharges
+* TotalCharges
+* InternetService
+* Contract
+* PaymentMethod
 
 ## Technologies Used
 
-- Python
-- Pandas
-- NumPy
-- Scikit-Learn
-- Streamlit
-- Joblib
+* Python
+* Pandas
+* NumPy
+* Scikit-Learn
+* Matplotlib
+* Seaborn
+* Streamlit
+* Git & GitHub
 
----
+## Data Preprocessing
 
-## Project Workflow
+The following preprocessing steps were performed:
 
-1. Data Collection
-2. Data Cleaning
-3. Missing Value Handling
-4. Data Preprocessing
-5. Feature Encoding
-6. Feature Scaling
-7. Train-Test Split
-8. Model Training
-9. Model Evaluation
-10. Model Deployment using Streamlit
-
----
+* Converted TotalCharges from object to numeric format
+* Handled missing values
+* Removed customerID column
+* Applied One-Hot Encoding for categorical variables
+* Scaled numerical features using StandardScaler
 
 ## Machine Learning Model
 
-Algorithm Used:
+### Algorithm Used
 
-- Logistic Regression
+Logistic Regression
 
-Reason:
+### Why Logistic Regression?
 
-Logistic Regression is suitable for binary classification problems and provides good interpretability.
-
----
+* Suitable for binary classification
+* Fast and efficient
+* Easy to interpret
+* Strong baseline performance
 
 ## Model Performance
 
-Accuracy Achieved:
+### Accuracy
 
-79%
+78.7%
 
-Evaluation Metrics:
+### Confusion Matrix
 
-- Accuracy
-- Precision
-- Recall
-- F1 Score
-- Confusion Matrix
+| Actual / Predicted | No Churn | Churn |
+| ------------------ | -------- | ----- |
+| No Churn           | 915      | 118   |
+| Churn              | 181      | 193   |
 
----
+### Classification Report
 
-## Important Features
+* Precision: 0.62
+* Recall: 0.52
+* F1 Score: 0.56
 
-Top Features Influencing Churn:
+### ROC-AUC Score
 
-- TotalCharges
-- MonthlyCharges
-- Tenure
-- InternetService_Fiber optic
-- PaymentMethod_Electronic check
+0.83
 
----
+## Feature Importance
 
-## Deployment
+Top features influencing customer churn:
 
-The model is deployed using Streamlit.
+1. TotalCharges
+2. MonthlyCharges
+3. Tenure
+4. InternetService_Fiber optic
+5. PaymentMethod_Electronic check
 
-Run locally:
+## Streamlit Application
 
-```bash
-streamlit run app.py
-```
+The trained model was deployed using Streamlit to provide real-time customer churn predictions.
 
----
+### Features
+
+* Interactive user interface
+* Automatic Total Charges calculation
+* Real-time churn prediction
+* Customer retention risk analysis
 
 ## Project Structure
 
-Customer_Churn_Prediction/
+Customer-Churn-Prediction/
 
 ├── app.py
 
 ├── train_model.py
 
-├── telco_churn.csv
-
-├── churn_model.pkl
-
-├── scaler.pkl
-
-├── features.pkl
-
 ├── requirements.txt
 
 ├── README.md
 
+├── data/
+
+│ └── telco_churn.csv
+
+├── models/
+
+│ ├── churn_model.pkl
+
+│ ├── scaler.pkl
+
+│ └── features.pkl
+
 └── screenshots/
 
----
+## Future Improvements
 
-## Business Impact
+* Random Forest Classifier
+* XGBoost Classifier
+* Hyperparameter Tuning
+* Power BI Dashboard Integration
+* Cloud Deployment
 
-This system helps telecom companies:
+## Conclusion
 
-- Reduce customer churn
-- Improve retention
-- Identify high-risk customers
-- Support data-driven decision making
-
----
+This project successfully predicts customer churn using Machine Learning techniques and provides a user-friendly Streamlit interface for real-time predictions. The solution can help telecom companies improve customer retention and reduce churn-related losses.
 
 ## Author
 
