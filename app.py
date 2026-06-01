@@ -17,10 +17,10 @@ st.set_page_config(
 # LOAD MODEL FILES
 # =========================
 
-model = joblib.load("churn_model.pkl")
-scaler = joblib.load("scaler.pkl")
-feature_columns = joblib.load("features.pkl")
-
+model = joblib.load("models/churn_model.pkl")
+scaler = joblib.load("models/scaler.pkl")
+features = joblib.load("models/features.pkl")
+feature_columns = features
 # =========================
 # CUSTOM CSS
 # =========================
